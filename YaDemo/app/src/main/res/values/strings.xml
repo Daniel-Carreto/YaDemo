@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">YaDemo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Login-->
+    <string name="user_input_field">Usuario</string>
+    <string name="password_input_field">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+
+
+    <!--Home-->
+    <string name="section_boletines">Boletines</string>
+    <string name="section_recargas">Recargas</string>
+    <string name="section_recaudacion">Recaudación</string>
+    <string name="section_admin">Administración</string>
+
+    <!--messages-->
+    <string name="network_error_message">Verifica que tu usuario y contraseña sean correctos</string>
+</resources>

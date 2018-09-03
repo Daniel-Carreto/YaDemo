@@ -1,0 +1,73 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="detailBrandViewModel"
+            type="com.naat.yademo.viewmodel.DetailBrandViewModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.DetailBrandActivity"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logo_brand_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_logo_tuenti" />
+
+        <EditText
+            android:id="@+id/phone_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_brand_imageview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="@={detailBrandViewModel.phoneNumber}" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/phone_edittext"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/phone_edittext"
+            android:src="@drawable/ic_phone" />
+
+        <EditText
+            android:id="@+id/amount_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_edittext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={detailBrandViewModel.amount}" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/amount_edittext"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/amount_edittext"
+            android:src="@drawable/ic_pass" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:onClick="@{detailBrandViewModel::onContinueClick}"
+            android:text="continuar" />
+    </RelativeLayout>
+</layout>

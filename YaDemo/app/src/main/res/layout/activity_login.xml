@@ -1,0 +1,10 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<FrameLayout
+    android:id="@+id/login_frame_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.LoginActivity">
+
+</FrameLayout>
+</layout>

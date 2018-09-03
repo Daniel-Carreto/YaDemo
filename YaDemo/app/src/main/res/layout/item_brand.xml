@@ -1,0 +1,96 @@
+<layout>
+
+    <data>
+        <variable
+            name="itemBrandViewModel"
+            type="com.naat.yademo.viewmodel.ItemBrandViewModel"/>
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/brand_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/trade_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{itemBrandViewModel.title}"
+        tools:text="marca" />
+
+    <TextView
+        android:id="@+id/show_more_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Ver más" />
+
+    <LinearLayout
+        android:id="@+id/image_linearcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_more_textview"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{itemBrandViewModel::onServiceClick}"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@{itemBrandViewModel.firstImage}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{itemBrandViewModel.firstService}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{itemBrandViewModel::onServiceClick}"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@{itemBrandViewModel.secondImage}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{itemBrandViewModel.secondService}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:onClick="@{itemBrandViewModel::onServiceClick}">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@{itemBrandViewModel.thirdImage}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{itemBrandViewModel.thirdService}" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>
